@@ -1,0 +1,80 @@
+{
+  "name": "dodash",
+  "version": "1.0.0",
+  "description": "dodash — a modern, lightweight, tree-shakeable utility library. The lodash alternative built for ES2024+.",
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs",
+      "types": "./types/index.d.ts"
+    },
+    "./array": {
+      "import": "./dist/esm/array/index.js",
+      "require": "./dist/cjs/array/index.cjs"
+    },
+    "./object": {
+      "import": "./dist/esm/object/index.js",
+      "require": "./dist/cjs/object/index.cjs"
+    },
+    "./string": {
+      "import": "./dist/esm/string/index.js",
+      "require": "./dist/cjs/string/index.cjs"
+    },
+    "./function": {
+      "import": "./dist/esm/function/index.js",
+      "require": "./dist/cjs/function/index.cjs"
+    },
+    "./lang": {
+      "import": "./dist/esm/lang/index.js",
+      "require": "./dist/cjs/lang/index.cjs"
+    },
+    "./collection": {
+      "import": "./dist/esm/collection/index.js",
+      "require": "./dist/cjs/collection/index.cjs"
+    },
+    "./math": {
+      "import": "./dist/esm/math/index.js",
+      "require": "./dist/cjs/math/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "types",
+    "src"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --config jest.config.js",
+    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
+    "bench": "node scripts/benchmark.js",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "utility",
+    "lodash",
+    "underscore",
+    "modern",
+    "tree-shake",
+    "esm",
+    "lightweight",
+    "functional",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "esbuild": "^0.20.0",
+    "jest": "^29.7.0",
+    "lodash": "^4.18.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
