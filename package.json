@@ -1,5 +1,5 @@
 {
-  "name": "dodash",
+  "name": "@srex/dodash",
   "version": "1.0.0",
   "description": "dodash — a modern, lightweight, tree-shakeable utility library. The lodash alternative built for ES2024+.",
   "type": "module",
@@ -68,6 +68,14 @@
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sureshravibala/dodash.git"
+  },
+  "homepage": "https://github.com/sureshravibala/dodash#readme",
+  "bugs": {
+    "url": "https://github.com/sureshravibala/dodash/issues"
+  },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "esbuild": "^0.20.0",
