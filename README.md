@@ -10,9 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/dodash"><img src="https://img.shields.io/npm/v/dodash.svg?style=flat-square&color=blue" alt="npm version" /></a>
-  <a href="https://www.npmjs.com/package/dodash"><img src="https://img.shields.io/npm/dm/dodash?style=flat-square&color=orange" alt="npm downloads" /></a>
-  <a href="https://bundlephobia.com/package/dodash"><img src="https://img.shields.io/bundlephobia/minzip/dodash?style=flat-square&color=green" alt="bundle size" /></a>
+  <a href="https://www.npmjs.com/package/@srex/dodash"><img src="https://img.shields.io/npm/v/@srex/dodash.svg?style=flat-square&color=blue" alt="npm version" /></a>
   <a href="#"><img src="https://img.shields.io/badge/tests-158%20passing-brightgreen?style=flat-square" alt="tests" /></a>
   <a href="#"><img src="https://img.shields.io/badge/functions-218-blue?style=flat-square" alt="functions" /></a>
   <a href="#"><img src="https://img.shields.io/badge/TypeScript-built--in-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="typescript" /></a>
@@ -20,7 +18,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/dodash"><strong>npm install dodash</strong></a>
+  <a href="https://www.npmjs.com/package/@srex/dodash"><strong>npm install @srex/dodash</strong></a>
 </p>
 
 <p align="center">
@@ -47,37 +45,39 @@ ESM + CJS dual output  ·  TypeScript built-in  ·  Tree-shakeable
 
 ### Install
 
-> **npm:** [https://www.npmjs.com/package/dodash](https://www.npmjs.com/package/dodash)
+> **npm:** [https://www.npmjs.com/package/@srex/dodash](https://www.npmjs.com/package/@srex/dodash)
+>
+> **GitHub:** [https://github.com/sureshravibala/dodash](https://github.com/sureshravibala/dodash)
 
 ```bash
-npm install dodash
+npm install @srex/dodash
 ```
 
 ```bash
-yarn add dodash
+yarn add @srex/dodash
 ```
 
 ```bash
-pnpm add dodash
+pnpm add @srex/dodash
 ```
 
 ### Import what you need
 
 ```js
 // Named imports (recommended — tree-shakeable)
-import { get, set, merge, cloneDeep } from 'dodash';
+import { get, set, merge, cloneDeep } from '@srex/dodash';
 
 // Category imports
-import { chunk, uniq, flatten } from 'dodash/array';
-import { debounce, throttle, memoize } from 'dodash/function';
-import { camelCase, kebabCase, truncate } from 'dodash/string';
-import { isEqual, isEmpty, isPlainObject } from 'dodash/lang';
+import { chunk, uniq, flatten } from '@srex/dodash/array';
+import { debounce, throttle, memoize } from '@srex/dodash/function';
+import { camelCase, kebabCase, truncate } from '@srex/dodash/string';
+import { isEqual, isEmpty, isPlainObject } from '@srex/dodash/lang';
 ```
 
 ### CommonJS
 
 ```js
-const { get, merge, cloneDeep } = require('dodash');
+const { get, merge, cloneDeep } = require('@srex/dodash');
 ```
 
 ---
@@ -381,7 +381,7 @@ dodash is a **drop-in replacement** for the most commonly used lodash functions.
 - const unique = _.uniq(array);
 - const merged = _.merge({}, defaults, config);
 
-+ import { get, uniq, merge } from 'dodash';
++ import { get, uniq, merge } from '@srex/dodash';
 + const value = get(obj, 'a.b.c');
 + const unique = uniq(array);
 + const merged = merge({}, defaults, config);
@@ -630,15 +630,15 @@ When you import only what you use, your bundle gets just those functions:
 
 ```js
 // This imports ~0.5 KB (minified) — not the full 26 KB
-import { get, isNil } from 'dodash';
+import { get, isNil } from '@srex/dodash';
 ```
 
 ```js
 // This imports ~1.2 KB
-import { debounce, throttle, memoize } from 'dodash';
+import { debounce, throttle, memoize } from '@srex/dodash';
 ```
 
-With lodash (even `lodash-es`), importing a single function often pulls in shared internals, inflating the bundle. dodash has **zero shared runtime dependencies** between modules — `sideEffects: false` ensures your bundler drops everything you don't use.
+With lodash (even `lodash-es`), importing a single function often pulls in shared internals, inflating the bundle. `@srex/dodash` has **zero shared runtime dependencies** between modules — `sideEffects: false` ensures your bundler drops everything you don't use.
 
 ---
 
@@ -662,7 +662,9 @@ npm run build
 
 ## Contributing
 
-Contributions are welcome. Please ensure:
+Contributions are welcome! Open issues and pull requests on [GitHub](https://github.com/sureshravibala/dodash).
+
+Please ensure:
 
 1. All new functions include JSDoc documentation
 2. All changes are covered by tests (`npm test`)
